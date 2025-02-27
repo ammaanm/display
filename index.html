@@ -2,5 +2,5 @@
 <script>
     var a = new URLSearchParams(location.search)
     document.head.innerHTML = decodeURIComponent(a.get("head"))
-    document.head.innerHTML = decodeURIComponent(a.get("body"))
+    document.body.innerHTML = decodeURIComponent(a.get("body"))
 </script>
