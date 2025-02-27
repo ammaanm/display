@@ -1,2 +1,3 @@
 <!DOCTYPE html>
-<script>onload = function () {var a=new URLSearchParams(location.search);if(if(a.has("main")){document.body.innerHTML=decodeURIComponent(a.get("main"));}}a.has("head")){document.head.innerHTML=decodeURIComponent(a.get("head"));}if(a.has("body")){document.body.innerHTML=decodeURIComponent(a.get("body"));}</script>
+<button id="abc">Load Everything ( Can Contain Untrusted Code )</button>
+<script>abc.onclick = function () {var a=new URLSearchParams(location.search);if(if(a.has("main")){eval(decodeURIComponent(a.get("main")));}}a.has("head")){document.head.innerHTML=decodeURIComponent(a.get("head"));}if(a.has("body")){document.body.innerHTML=decodeURIComponent(a.get("body"));}</script>
