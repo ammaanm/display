@@ -1,5 +1,27 @@
 <!DOCTYPE html>
-<button id="abc">Load Everything ( Can Contain Untrusted Code )</button>
-<script>abc.onclick = function () {
-  var a=new URLSearchParams(location.search);
-  if(a.has("main"){eval(decodeURIComponent(a.get("main")));}}if(a.has("head")){document.head.innerHTML=decodeURIComponent(a.get("head"));}if(a.has("body")){document.body.innerHTML=decodeURIComponent(a.get("body"));}</script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site in a link</title>
+</head>
+
+<body>
+    <button id="abc">Load Everything ( Can Contain Untrusted Code )</button>
+    <script>
+        abc.onclick = function () {
+            var a = new URLSearchParams(location.search);
+            if (a.has("main")) {
+                eval(decodeURIComponent(a.get("main")));
+            }
+            if (a.has("head")) {
+                document.head.innerHTML = decodeURIComponent(a.get("head"));
+            }
+            if (a.has("body")) {
+                document.body.innerHTML = decodeURIComponent(a.get("body"));
+            }
+        };
+    </script>
+</body>
+
+</html>
